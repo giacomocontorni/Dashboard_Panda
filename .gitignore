@@ -1,5 +1,5 @@
 # Ambiente virtuale
-venv/
+kivy_venv/
 .env/
 
 # Cache Python
