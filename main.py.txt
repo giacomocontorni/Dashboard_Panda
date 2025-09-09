@@ -1,0 +1,47 @@
+
+
+from kivy.config import Config
+Config.set('graphics', 'width', '1280')
+Config.set('graphics', 'height', '400')
+
+Config.set('kivy', 'video', 'ffpyplayer')  # Deve venire PRIMA degli import di Kivy
+
+# Importa la classe base per creare un'app Kivy
+from kivy.app import App
+
+# Importa il layout BoxLayout (organizza i widget in verticale o orizzontale)
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.core.window import Window
+
+# Crea una classe che eredita da BoxLayout
+class ToolBar(FloatLayout):
+    # Funzione che verrà chiamata quando l'utente preme il bottone
+    def cambia_testo(self):
+        # Accede al bottone tramite il suo ID e cambia il suo testo
+        self.ids.mio_bottone.text = "Hai cliccatooooo!"
+
+# Crea la classe principale dell'app, che eredita da App
+class PaginaUno(Screen):
+    pass
+
+class PaginaDue(Screen):
+    pass
+
+class MyApp(App):
+    def build(self):
+        sm = ScreenManager()
+        sm.add_widget(PaginaUno(name='pagina1'))
+        sm.add_widget(PaginaDue(name='pagina2'))
+        return sm
+
+if __name__ == '__main__':
+    MyApp().run()
+    # Metodo build: restituisce il layout principale da visualizzare
+ #/   def build(self):
+   #    return ToolBar() 
+
+# Avvia l'app quando il file viene eseguito direttamente
+#if __name__ == '__main__':
+  #  MyApp().run()

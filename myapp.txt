@@ -1,0 +1,59 @@
+# Definisce le proprietà grafiche del layout MyLayout
+<ToolBar>:
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, 0.1
+        pos_hint: {'center_x': 0.5, 'y': 0}  # Centrato orizzontalmente in basso
+        spacing: 1
+        corner_radius: 5
+        # Definisce un bottone
+        ToggleButton:
+            text: "OFF"
+            on_state:
+                self.text = "ON" if self.state == "down" else "OFF"
+            # ID che serve per accedere al bottone dal codice Python
+            id: tool1
+            # Dimensione del font del testo
+            font_size: 30
+        ToggleButton:
+            text: "OFF"
+            on_state:
+                self.text = "ON" if self.state == "down" else "OFF"
+            # ID che serve per accedere al bottone dal codice Python
+            id: tool2
+            # Dimensione del font del testo
+            font_size: 30
+        ToggleButton:
+            text: "OFF"
+            on_state:
+                self.text = "ON" if self.state == "down" else "OFF"
+            # ID che serve per accedere al bottone dal codice Python
+            id: tool3
+            # Dimensione del font del testo
+            font_size: 30
+        ToggleButton:
+            text: "OFF"
+            on_state:
+                self.text = "ON" if self.state == "down" else "OFF"
+            # ID che serve per accedere al bottone dal codice Python
+            id: tool4
+            # Dimensione del font del testo
+            font_size: 30
+        ToggleButton:
+            text: "OFF"
+            on_state:
+                self.text = "ON" if self.state == "down" else "OFF"
+            # ID che serve per accedere al bottone dal codice Python
+            id: tool5
+            # Dimensione del font del testo
+            font_size: 30
+        ToggleButton:
+            text: "OFF"
+            on_state:
+                self.text = "ON" if self.state == "down" else "OFF"
+            # ID che serve per accedere al bottone dal codice Python
+            id: tool6
+            # Dimensione del font del testo
+            font_size: 30
+
+        
